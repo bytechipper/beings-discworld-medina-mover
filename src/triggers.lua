@@ -216,7 +216,7 @@ function Triggers.register_all()
 
     handle = mud.trigger("^You follow .* (north|northeast|east|southeast|south|southwest|west|northwest)\\.$", function(m)
         local med = State.get()
-        if not med then return end
+        if not med or not med.is_in_medina then return end
         med.commands.move.count = (med.commands.move.count or 0) + 1
         local direction = Move.format_direction(m[1])
         table.insert(med.commands.move, 1, direction)

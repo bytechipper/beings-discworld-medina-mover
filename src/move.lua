@@ -92,6 +92,8 @@ end
 
 function Move.construct_seq()
     local med = State.get()
+    -- Keep an unknown base room separate from queued movement predictions.
+    if type(med.sequence[1]) ~= "table" then med.sequence[1] = {} end
     while med.sequence[2] do
         table.remove(med.sequence, 2)
     end
@@ -102,6 +104,7 @@ end
 
 function Move.get_seq(start_room, direction)
     local med = State.get()
+    start_room = type(start_room) == "table" and start_room or {}
     local function get_adj(r)
         local t = {}
         if not med.rooms[r] then return t end
@@ -116,7 +119,7 @@ function Move.get_seq(start_room, direction)
 
     local end_room = {}
     if direction and direction:match("l") then
-        end_room = start_room
+        for _, room in ipairs(start_room) do end_room[room] = true end
     else
         for _, r in ipairs(start_room) do
             if med.rooms[r] and med.rooms[r].exits and med.rooms[r].exits[direction]

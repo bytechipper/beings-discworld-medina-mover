@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5
+
+- Ignore follow messages outside the Medina.
+- Handle following before the current room is known without crashing or shifting the queued trajectory.
+- Preserve candidate-set shape for look predictions.
+
 ## 1.0.4
 
 - Remove automatic Room.Info, connection, and alleyway-detection debug messages.
