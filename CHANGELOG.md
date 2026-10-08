@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Remove automatic Room.Info, connection, and alleyway-detection debug messages.
+
 ## 1.0.3
 
 - Rename the plugin to Being's Discworld Medina Mover.

@@ -25,7 +25,6 @@ Triggers.register_all()
 Panel.request_redraw()
 
 gmcp.on("Room.Info", function(pkg, data)
-    log.info("[medina] Room.Info identifier=" .. tostring(data.identifier))
     if data.identifier == "BPMedina" then
         Toggle.enter()
     else
@@ -34,7 +33,6 @@ gmcp.on("Room.Info", function(pkg, data)
 end)
 
 world.on("connect", function()
-    log.info("[medina] world connected, sending look to detect location")
     mud.delay(500, function()
         mud.send("look")
     end)
@@ -43,7 +41,6 @@ end)
 world.on("line", function(line)
     local med = State.get()
     if med and not med.is_in_medina and line.text:match("%[somewhere in an alleyway%]") then
-        log.info("[medina] detected alleyway title while not in Medina, entering")
         Toggle.enter()
     end
 end)

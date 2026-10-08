@@ -1,7 +1,7 @@
 id = "net.discworld.medina-movement"
 name = "Being's Discworld Medina Mover"
 description = "Map and navigate the Red Triangle Medina maze, track occupants, and exchange map data with other players."
-version = "1.0.3"
+version = "1.0.4"
 language = "lua"
 entry = "src/main.lua"
 mallard_api_version = "1.0"
