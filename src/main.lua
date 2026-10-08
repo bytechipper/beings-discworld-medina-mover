@@ -124,7 +124,7 @@ mud.command("medina", function(m)
         Panel._show_help()
     end
 end, {
-    description = "Medina Movement mapper",
+    description = "Being's Discworld Medina Mover mapper",
     usage = "/medina [help|arrow|reset|sync|table|window]",
 })
 

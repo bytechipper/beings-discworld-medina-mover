@@ -1,4 +1,4 @@
-# Medina Movement
+# Being's Discworld Medina Mover
 
 Map and navigate the Red Triangle Medina maze, track occupants, and exchange map data with other players.
 

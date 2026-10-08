@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Rename the plugin to Being's Discworld Medina Mover.
+
 ## 1.0.2
 
 - Validate against Mallard 0.27.0 (API 1.0).

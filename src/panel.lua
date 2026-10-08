@@ -179,7 +179,7 @@ function Panel._push_state()
 end
 
 function Panel._show_help()
-    mud.note("[medina] Medina Movement v" .. Config.VERSION, { fg = "cyan", bold = true })
+    mud.note("[medina] Being's Discworld Medina Mover v" .. Config.VERSION, { fg = "cyan", bold = true })
     mud.note("  /medina help     - Show this help", { fg = "white" })
     mud.note("  /medina arrow [default|rainbow] - Change arrow set", { fg = "white" })
     mud.note("  /medina reset    - Reset entire map", { fg = "white" })
