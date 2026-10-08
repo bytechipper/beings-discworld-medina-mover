@@ -344,7 +344,8 @@ function Solve.verify_room(possible_start, start_exits, direction, possible_end,
     end
 
     local result_start = to_list(start_room_set)
-    local result_end = to_list(end_room_set)
+    local result_end = {}
+    for _, room in ipairs(end_room_set) do table.insert(result_end, room) end
     result_start.exits = start_exits
     result_end.exits = end_exits
     return result_start, result_end

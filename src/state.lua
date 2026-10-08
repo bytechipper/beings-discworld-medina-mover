@@ -120,16 +120,21 @@ function State.reset_rooms()
     set_med(med)
 end
 
-function State.reset_room(room)
+function State.reset_room_exits(room)
     local med = get_med()
     for _, dir in pairs(med.rooms[room].exit_rooms) do
         med.rooms[room].normalized[dir] = false
     end
     med.rooms[room].solved = false
     med.rooms[room].exits = false
-    med.rooms[room].visited = false
     if room == "A" then med.rooms.A.normalized.nw = "nw" end
     if room == "R" then med.rooms.R.normalized.se = "se" end
+end
+
+function State.reset_room(room)
+    local med = get_med()
+    State.reset_room_exits(room)
+    med.rooms[room].visited = false
     med.rooms[room].thyngs = { mobs = { thugs = 0, heavies = 0, boss = 0 }, players = {} }
 end
 

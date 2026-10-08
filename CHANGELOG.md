@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6
+
+- Reset changed room exits without crashing, preserving occupants and visitation.
+- Keep room letters in verified movement candidates so subsequent moves track correctly.
+
 ## 1.0.5
 
 - Ignore follow messages outside the Medina.

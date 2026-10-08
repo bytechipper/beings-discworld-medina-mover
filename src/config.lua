@@ -1,6 +1,6 @@
 local Config = {}
 
-Config.VERSION = "1.0.5"
+Config.VERSION = "1.0.6"
 
 Config.TITLE_HEIGHT = 16
 Config.DEFAULT_WINDOW_SIZE = 300
